@@ -1,5 +1,6 @@
 package com.kienast;
 
+import static com.kienast.barkingdog.BarkingDog.shouldWakeUp;
 import static com.kienast.megabytesconverter.MegaBytesConverter.printMegaBytesAndKiloBytes;
 import static com.kienast.speedconverter.SpeedConverter.printConversion;
 import static com.kienast.speedconverter.SpeedConverter.toMilesPerHour;
@@ -17,6 +18,15 @@ public class Main {
 
         // Q2: Megabytes converter
         // printMegaBytesAndKiloBytes(2500);
+
+
+        // Q3: Barking dog
+        /*
+        shouldWakeUp(true, 1);
+        shouldWakeUp(false, 2);
+        shouldWakeUp(true, 8);
+        shouldWakeUp(true, -1);
+         */
 
 
     }
