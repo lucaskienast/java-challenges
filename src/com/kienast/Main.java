@@ -1,6 +1,7 @@
 package com.kienast;
 
 import static com.kienast.decimalComparator.DecimalComparator.areEqualByThreeDecimalPlaces;
+import static com.kienast.equalSumChecker.EqualSumChecker.hasEqualSum;
 
 public class Main {
 
@@ -39,8 +40,16 @@ public class Main {
 
 
         // Q5: Decimal comparator
+        /*
         areEqualByThreeDecimalPlaces(-3.1756, -3.175);
         areEqualByThreeDecimalPlaces(3.175, 3.176);
+         */
+
+
+        // Q6: Equal sum checker
+        hasEqualSum(1, 1, 1);
+        hasEqualSum(1, 1, 2);
+        hasEqualSum(1, -1, 0);
 
     }
 }
