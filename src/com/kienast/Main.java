@@ -4,6 +4,7 @@ import static com.kienast.areaCalculator.AreaCalculator.area;
 import static com.kienast.decimalComparator.DecimalComparator.areEqualByThreeDecimalPlaces;
 import static com.kienast.equalSumChecker.EqualSumChecker.hasEqualSum;
 import static com.kienast.minutesToYearsAndDays.MinutesToYearsAndDays.printYearsAndDays;
+import static com.kienast.playingCats.PlayingCats.isCatPlaying;
 
 public class Main {
 
@@ -66,10 +67,18 @@ public class Main {
 
 
         // Q8: Minutes to years and days
+        /*
         printYearsAndDays(-1);
         printYearsAndDays(525600);
         printYearsAndDays(1051200);
         printYearsAndDays(561600);
+         */
+
+
+        // Q9: Playing cats
+        isCatPlaying(true, 10);
+        isCatPlaying(false, 36);
+        isCatPlaying(false, 35);
 
     }
 }
