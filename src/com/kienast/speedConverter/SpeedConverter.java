@@ -1,4 +1,4 @@
-package com.kienast.speedconverter;
+package com.kienast.speedConverter;
 
 public class SpeedConverter {
 
