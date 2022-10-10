@@ -1,4 +1,4 @@
-package com.kienast.megabytesconverter;
+package com.kienast.megabytesConverter;
 
 public class MegaBytesConverter {
 

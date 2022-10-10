@@ -1,4 +1,4 @@
-package com.kienast.barkingdog;
+package com.kienast.barkingDog;
 
 public class BarkingDog {
 

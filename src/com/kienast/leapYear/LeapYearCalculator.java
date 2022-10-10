@@ -1,4 +1,4 @@
-package com.kienast.leapyear;
+package com.kienast.leapYear;
 
 public class LeapYearCalculator {
 
