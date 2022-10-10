@@ -3,6 +3,7 @@ package com.kienast;
 import static com.kienast.areaCalculator.AreaCalculator.area;
 import static com.kienast.decimalComparator.DecimalComparator.areEqualByThreeDecimalPlaces;
 import static com.kienast.equalSumChecker.EqualSumChecker.hasEqualSum;
+import static com.kienast.minutesToYearsAndDays.MinutesToYearsAndDays.printYearsAndDays;
 
 public class Main {
 
@@ -56,10 +57,19 @@ public class Main {
 
 
         // Q7: Area calculator
+        /*
         area(5.0);
         area(-1.0);
         area(5.0, 4.0);
         area(-1.0, 4.0);
+         */
+
+
+        // Q8: Minutes to years and days
+        printYearsAndDays(-1);
+        printYearsAndDays(525600);
+        printYearsAndDays(1051200);
+        printYearsAndDays(561600);
 
     }
 }
