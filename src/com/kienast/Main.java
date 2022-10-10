@@ -1,5 +1,6 @@
 package com.kienast;
 
+import static com.kienast.areaCalculator.AreaCalculator.area;
 import static com.kienast.decimalComparator.DecimalComparator.areEqualByThreeDecimalPlaces;
 import static com.kienast.equalSumChecker.EqualSumChecker.hasEqualSum;
 
@@ -47,9 +48,18 @@ public class Main {
 
 
         // Q6: Equal sum checker
+        /*
         hasEqualSum(1, 1, 1);
         hasEqualSum(1, 1, 2);
         hasEqualSum(1, -1, 0);
+         */
+
+
+        // Q7: Area calculator
+        area(5.0);
+        area(-1.0);
+        area(5.0, 4.0);
+        area(-1.0, 4.0);
 
     }
 }
