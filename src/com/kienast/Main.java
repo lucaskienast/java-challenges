@@ -4,6 +4,7 @@ import static com.kienast.areaCalculator.AreaCalculator.area;
 import static com.kienast.decimalComparator.DecimalComparator.areEqualByThreeDecimalPlaces;
 import static com.kienast.equalSumChecker.EqualSumChecker.hasEqualSum;
 import static com.kienast.minutesToYearsAndDays.MinutesToYearsAndDays.printYearsAndDays;
+import static com.kienast.numberOfDaysInMonth.NumberOfDaysInMonth.getDaysInMonth;
 import static com.kienast.playingCats.PlayingCats.isCatPlaying;
 
 public class Main {
@@ -76,9 +77,19 @@ public class Main {
 
 
         // Q9: Playing cats
+        /*
         isCatPlaying(true, 10);
         isCatPlaying(false, 36);
         isCatPlaying(false, 35);
+         */
+
+
+        // Q10: Number of days
+        getDaysInMonth(1, 2020);
+        getDaysInMonth(2, 2020);
+        getDaysInMonth(2, 2018);
+        getDaysInMonth(-1, 2020);
+        getDaysInMonth(1, -2020);
 
     }
 }
