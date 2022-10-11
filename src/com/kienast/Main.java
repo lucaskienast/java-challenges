@@ -6,6 +6,7 @@ import static com.kienast.equalSumChecker.EqualSumChecker.hasEqualSum;
 import static com.kienast.minutesToYearsAndDays.MinutesToYearsAndDays.printYearsAndDays;
 import static com.kienast.numberOfDaysInMonth.NumberOfDaysInMonth.getDaysInMonth;
 import static com.kienast.playingCats.PlayingCats.isCatPlaying;
+import static com.kienast.sumOdd.SumOdd.sumOdd;
 
 public class Main {
 
@@ -85,11 +86,22 @@ public class Main {
 
 
         // Q10: Number of days
+        /*
         getDaysInMonth(1, 2020);
         getDaysInMonth(2, 2020);
         getDaysInMonth(2, 2018);
         getDaysInMonth(-1, 2020);
         getDaysInMonth(1, -2020);
+         */
+
+
+        // Q11: Sum odd
+        sumOdd(1, 100);
+        sumOdd(-1, 100);
+        sumOdd(100, 100);
+        sumOdd(13, 13);
+        sumOdd(100, -100);
+        sumOdd(100, 1000);
 
     }
 }
