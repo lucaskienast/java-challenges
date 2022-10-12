@@ -6,6 +6,7 @@ import static com.kienast.digitSum.DigitSum.sumDigits;
 import static com.kienast.equalSumChecker.EqualSumChecker.hasEqualSum;
 import static com.kienast.firstAndLastDigitSum.FirstAndLastDigitSum.sumFirstAndLastDigit;
 import static com.kienast.getEvenDigitSum.EvenDigitSum.getEvenDigitSum;
+import static com.kienast.lastDigitChecker.LastDigitChecker.hasSameLastDigit;
 import static com.kienast.minutesToYearsAndDays.MinutesToYearsAndDays.printYearsAndDays;
 import static com.kienast.numberOfDaysInMonth.NumberOfDaysInMonth.getDaysInMonth;
 import static com.kienast.numberPalindrome.NumberPalindrome.isPalindrome;
@@ -150,10 +151,18 @@ public class Main {
 
 
         // Q16: Shared digit
+        /*
         hasSharedDigit(12, 23);
         hasSharedDigit(9, 99);
         hasSharedDigit(15, 55);
         hasSharedDigit(24, 67);
+         */
+
+
+        // Q17: Last digit checker
+        hasSameLastDigit(41, 22, 71);
+        hasSameLastDigit(23, 32, 42);
+        hasSameLastDigit(9, 99, 999);
 
     }
 }
