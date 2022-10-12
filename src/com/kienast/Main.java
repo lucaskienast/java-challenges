@@ -6,6 +6,7 @@ import static com.kienast.digitSum.DigitSum.sumDigits;
 import static com.kienast.equalSumChecker.EqualSumChecker.hasEqualSum;
 import static com.kienast.minutesToYearsAndDays.MinutesToYearsAndDays.printYearsAndDays;
 import static com.kienast.numberOfDaysInMonth.NumberOfDaysInMonth.getDaysInMonth;
+import static com.kienast.numberPalindrome.NumberPalindrome.isPalindrome;
 import static com.kienast.playingCats.PlayingCats.isCatPlaying;
 import static com.kienast.sumOdd.SumOdd.sumOdd;
 
@@ -108,8 +109,24 @@ public class Main {
 
 
         // Q12: Sum digits
+        /*
         sumDigits(125);
         sumDigits(-1);
+         */
+
+
+        // Q13: Number palindrome
+        /*
+        isPalindrome(11);
+        isPalindrome(121);
+        isPalindrome(1221);
+        isPalindrome(12321);
+        isPalindrome(1);
+        isPalindrome(211);
+        isPalindrome(1121);
+        isPalindrome(11421);
+         */
+
 
     }
 }
