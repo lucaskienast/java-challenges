@@ -4,6 +4,7 @@ import static com.kienast.areaCalculator.AreaCalculator.area;
 import static com.kienast.decimalComparator.DecimalComparator.areEqualByThreeDecimalPlaces;
 import static com.kienast.digitSum.DigitSum.sumDigits;
 import static com.kienast.equalSumChecker.EqualSumChecker.hasEqualSum;
+import static com.kienast.firstAndLastDigitSum.FirstAndLastDigitSum.sumFirstAndLastDigit;
 import static com.kienast.minutesToYearsAndDays.MinutesToYearsAndDays.printYearsAndDays;
 import static com.kienast.numberOfDaysInMonth.NumberOfDaysInMonth.getDaysInMonth;
 import static com.kienast.numberPalindrome.NumberPalindrome.isPalindrome;
@@ -127,6 +128,15 @@ public class Main {
         isPalindrome(11421);
          */
 
+
+        // Q14: First and last digit sum
+        /*
+        sumFirstAndLastDigit(252);
+        sumFirstAndLastDigit(1000001);
+        sumFirstAndLastDigit(0);
+        sumFirstAndLastDigit(5);
+        sumFirstAndLastDigit(-10);
+         */
 
     }
 }
