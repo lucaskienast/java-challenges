@@ -5,6 +5,7 @@ import static com.kienast.decimalComparator.DecimalComparator.areEqualByThreeDec
 import static com.kienast.digitSum.DigitSum.sumDigits;
 import static com.kienast.equalSumChecker.EqualSumChecker.hasEqualSum;
 import static com.kienast.firstAndLastDigitSum.FirstAndLastDigitSum.sumFirstAndLastDigit;
+import static com.kienast.getEvenDigitSum.EvenDigitSum.getEvenDigitSum;
 import static com.kienast.minutesToYearsAndDays.MinutesToYearsAndDays.printYearsAndDays;
 import static com.kienast.numberOfDaysInMonth.NumberOfDaysInMonth.getDaysInMonth;
 import static com.kienast.numberPalindrome.NumberPalindrome.isPalindrome;
@@ -137,6 +138,12 @@ public class Main {
         sumFirstAndLastDigit(5);
         sumFirstAndLastDigit(-10);
          */
+
+
+        // Q15: Even digit sum
+        getEvenDigitSum(123456789);
+        getEvenDigitSum(252);
+        getEvenDigitSum(-22);
 
     }
 }
