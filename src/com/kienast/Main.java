@@ -10,6 +10,7 @@ import static com.kienast.minutesToYearsAndDays.MinutesToYearsAndDays.printYears
 import static com.kienast.numberOfDaysInMonth.NumberOfDaysInMonth.getDaysInMonth;
 import static com.kienast.numberPalindrome.NumberPalindrome.isPalindrome;
 import static com.kienast.playingCats.PlayingCats.isCatPlaying;
+import static com.kienast.sharedDigit.SharedDigit.hasSharedDigit;
 import static com.kienast.sumOdd.SumOdd.sumOdd;
 
 public class Main {
@@ -141,9 +142,18 @@ public class Main {
 
 
         // Q15: Even digit sum
+        /*
         getEvenDigitSum(123456789);
         getEvenDigitSum(252);
         getEvenDigitSum(-22);
+         */
+
+
+        // Q16: Shared digit
+        hasSharedDigit(12, 23);
+        hasSharedDigit(9, 99);
+        hasSharedDigit(15, 55);
+        hasSharedDigit(24, 67);
 
     }
 }
