@@ -6,6 +6,7 @@ import static com.kienast.decimalComparator.DecimalComparator.areEqualByThreeDec
 import static com.kienast.digitSum.DigitSum.sumDigits;
 import static com.kienast.equalSumChecker.EqualSumChecker.hasEqualSum;
 import static com.kienast.firstAndLastDigitSum.FirstAndLastDigitSum.sumFirstAndLastDigit;
+import static com.kienast.flourPack.FlourPack.canPack;
 import static com.kienast.getEvenDigitSum.EvenDigitSum.getEvenDigitSum;
 import static com.kienast.greatestCommonDivisor.GreatestCommonDivisor.getGreatestCommonDivisor;
 import static com.kienast.lastDigitChecker.LastDigitChecker.hasSameLastDigit;
@@ -198,9 +199,19 @@ public class Main {
 
 
         // Q21: Number to words
+        /*
         numberToWords(123);
         numberToWords(509);
         numberToWords(-1);
+         */
+
+
+        // Q21: Flour packer
+        canPack(1, 0, 4);
+        canPack(1, 0, 5);
+        canPack(0, 5, 4);
+        canPack(2, 2, 11);
+        canPack(-3, 2, 12);
 
     }
 }
