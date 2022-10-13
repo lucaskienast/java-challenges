@@ -12,6 +12,7 @@ import static com.kienast.lastDigitChecker.LastDigitChecker.hasSameLastDigit;
 import static com.kienast.minutesToYearsAndDays.MinutesToYearsAndDays.printYearsAndDays;
 import static com.kienast.numberOfDaysInMonth.NumberOfDaysInMonth.getDaysInMonth;
 import static com.kienast.numberPalindrome.NumberPalindrome.isPalindrome;
+import static com.kienast.numberToWords.NumberToWords.numberToWords;
 import static com.kienast.perfectNumber.PerfectNumber.isPerfectNumber;
 import static com.kienast.playingCats.PlayingCats.isCatPlaying;
 import static com.kienast.sharedDigit.SharedDigit.hasSharedDigit;
@@ -188,10 +189,18 @@ public class Main {
 
 
         // Q20: Perfect number
+        /*
         isPerfectNumber(6);
         isPerfectNumber(28);
         isPerfectNumber(5);
         isPerfectNumber(-1);
+         */
+
+
+        // Q21: Number to words
+        numberToWords(123);
+        numberToWords(509);
+        numberToWords(-1);
 
     }
 }
