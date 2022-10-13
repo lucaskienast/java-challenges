@@ -3,6 +3,7 @@ package com.kienast;
 import static com.kienast.allFactors.AllFactors.printFactors;
 import static com.kienast.areaCalculator.AreaCalculator.area;
 import static com.kienast.decimalComparator.DecimalComparator.areEqualByThreeDecimalPlaces;
+import static com.kienast.diagonalStar.DiagonalStar.printSquareStar;
 import static com.kienast.digitSum.DigitSum.sumDigits;
 import static com.kienast.equalSumChecker.EqualSumChecker.hasEqualSum;
 import static com.kienast.firstAndLastDigitSum.FirstAndLastDigitSum.sumFirstAndLastDigit;
@@ -218,11 +219,17 @@ public class Main {
 
 
         // Q23: Largest prime
+        /*
         getLargestPrime(21);
         getLargestPrime(217);
         getLargestPrime(0);
         getLargestPrime(45);
         getLargestPrime(-1);
+         */
+
+
+        // Q24: Diagonal star
+        printSquareStar(20);
 
     }
 }
