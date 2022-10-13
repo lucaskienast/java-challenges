@@ -9,6 +9,7 @@ import static com.kienast.firstAndLastDigitSum.FirstAndLastDigitSum.sumFirstAndL
 import static com.kienast.flourPack.FlourPack.canPack;
 import static com.kienast.getEvenDigitSum.EvenDigitSum.getEvenDigitSum;
 import static com.kienast.greatestCommonDivisor.GreatestCommonDivisor.getGreatestCommonDivisor;
+import static com.kienast.largestPrime.LargestPrime.getLargestPrime;
 import static com.kienast.lastDigitChecker.LastDigitChecker.hasSameLastDigit;
 import static com.kienast.minutesToYearsAndDays.MinutesToYearsAndDays.printYearsAndDays;
 import static com.kienast.numberOfDaysInMonth.NumberOfDaysInMonth.getDaysInMonth;
@@ -206,12 +207,22 @@ public class Main {
          */
 
 
-        // Q21: Flour packer
+        // Q22: Flour packer
+        /*
         canPack(1, 0, 4);
         canPack(1, 0, 5);
         canPack(0, 5, 4);
         canPack(2, 2, 11);
         canPack(-3, 2, 12);
+         */
+
+
+        // Q23: Largest prime
+        getLargestPrime(21);
+        getLargestPrime(217);
+        getLargestPrime(0);
+        getLargestPrime(45);
+        getLargestPrime(-1);
 
     }
 }
