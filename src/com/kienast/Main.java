@@ -10,6 +10,7 @@ import static com.kienast.firstAndLastDigitSum.FirstAndLastDigitSum.sumFirstAndL
 import static com.kienast.flourPack.FlourPack.canPack;
 import static com.kienast.getEvenDigitSum.EvenDigitSum.getEvenDigitSum;
 import static com.kienast.greatestCommonDivisor.GreatestCommonDivisor.getGreatestCommonDivisor;
+import static com.kienast.inputCalculator.InputCalculator.inputThenPrintSumAndAverage;
 import static com.kienast.largestPrime.LargestPrime.getLargestPrime;
 import static com.kienast.lastDigitChecker.LastDigitChecker.hasSameLastDigit;
 import static com.kienast.minutesToYearsAndDays.MinutesToYearsAndDays.printYearsAndDays;
@@ -229,7 +230,13 @@ public class Main {
 
 
         // Q24: Diagonal star
+        /*
         printSquareStar(20);
+         */
+
+
+        // Q25: Input calculator
+        inputThenPrintSumAndAverage();
 
     }
 }
