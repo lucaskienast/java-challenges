@@ -1,5 +1,6 @@
 package com.kienast;
 
+import static com.kienast.allFactors.AllFactors.printFactors;
 import static com.kienast.areaCalculator.AreaCalculator.area;
 import static com.kienast.decimalComparator.DecimalComparator.areEqualByThreeDecimalPlaces;
 import static com.kienast.digitSum.DigitSum.sumDigits;
@@ -169,10 +170,18 @@ public class Main {
 
 
         // Q18: Greatest common divisor
+        /*
         getGreatestCommonDivisor(25, 15);
         getGreatestCommonDivisor(12, 30);
         getGreatestCommonDivisor(9, 18);
         getGreatestCommonDivisor(81, 153);
+         */
+
+        // Q19: All factors
+        printFactors(6);
+        printFactors(32);
+        printFactors(10);
+        printFactors(-1);
 
     }
 }
