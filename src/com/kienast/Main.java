@@ -17,6 +17,7 @@ import static com.kienast.minutesToYearsAndDays.MinutesToYearsAndDays.printYears
 import static com.kienast.numberOfDaysInMonth.NumberOfDaysInMonth.getDaysInMonth;
 import static com.kienast.numberPalindrome.NumberPalindrome.isPalindrome;
 import static com.kienast.numberToWords.NumberToWords.numberToWords;
+import static com.kienast.paintJob.PaintJob.getBucketCount;
 import static com.kienast.perfectNumber.PerfectNumber.isPerfectNumber;
 import static com.kienast.playingCats.PlayingCats.isCatPlaying;
 import static com.kienast.sharedDigit.SharedDigit.hasSharedDigit;
@@ -236,7 +237,18 @@ public class Main {
 
 
         // Q25: Input calculator
+        /*
         inputThenPrintSumAndAverage();
+         */
+
+
+        // Q26: Paint job
+        getBucketCount(-3.4, 2.1, 1.5, 2);
+        getBucketCount(3.4, 2.1, 1.5, 2);
+        getBucketCount(2.75, 3.25, 2.5, 1);
+        getBucketCount(-3.4, 2.1, 1.5);
+        getBucketCount(3.4, 2.1, 1.5);
+        getBucketCount(7.25, 4.3, 2.35);
 
     }
 }
