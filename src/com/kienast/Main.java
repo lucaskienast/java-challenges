@@ -1,6 +1,7 @@
 package com.kienast;
 
 import com.kienast.oop.person.Person;
+import com.kienast.oop.point.Point;
 import com.kienast.oop.sumCalculator.SumCalculator;
 import com.kienast.oop.wallArea.Wall;
 
@@ -279,7 +280,14 @@ public class Main {
          */
 
 
-
+        // Q30: Point
+        Point first = new Point(6, 5);
+        Point second = new Point(3, 1);
+        System.out.println("distance(0,0)= " + first.distance());
+        System.out.println("distance(second)= " + first.distance(second));
+        System.out.println("distance(2,2)= " + first.distance(2, 2));
+        Point point = new Point();
+        System.out.println("distance()= " + point.distance());
 
     }
 }
