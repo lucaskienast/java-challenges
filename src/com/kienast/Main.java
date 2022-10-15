@@ -1,5 +1,8 @@
 package com.kienast;
 
+import com.kienast.oop.carpetCost.Calculator;
+import com.kienast.oop.carpetCost.Carpet;
+import com.kienast.oop.carpetCost.Floor;
 import com.kienast.oop.person.Person;
 import com.kienast.oop.point.Point;
 import com.kienast.oop.sumCalculator.SumCalculator;
@@ -281,6 +284,7 @@ public class Main {
 
 
         // Q30: Point
+        /*
         Point first = new Point(6, 5);
         Point second = new Point(3, 1);
         System.out.println("distance(0,0)= " + first.distance());
@@ -288,6 +292,18 @@ public class Main {
         System.out.println("distance(2,2)= " + first.distance(2, 2));
         Point point = new Point();
         System.out.println("distance()= " + point.distance());
+         */
+
+
+        // Q31: Carpet cost calculator
+        Carpet carpet = new Carpet(3.5);
+        Floor floor = new Floor(2.75, 4.0);
+        Calculator calculator = new Calculator(floor, carpet);
+        System.out.println("total= " + calculator.getTotalCost());
+        carpet = new Carpet(1.5);
+        floor = new Floor(5.4, 4.5);
+        calculator = new Calculator(floor, carpet);
+        System.out.println("total= " + calculator.getTotalCost());
 
     }
 }
