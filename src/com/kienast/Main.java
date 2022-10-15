@@ -4,6 +4,8 @@ import com.kienast.oop.carpetCost.Calculator;
 import com.kienast.oop.carpetCost.Carpet;
 import com.kienast.oop.carpetCost.Floor;
 import com.kienast.oop.complexNumber.ComplexNumber;
+import com.kienast.oop.cylinder.Circle;
+import com.kienast.oop.cylinder.Cylinder;
 import com.kienast.oop.person.Person;
 import com.kienast.oop.point.Point;
 import com.kienast.oop.sumCalculator.SumCalculator;
@@ -325,7 +327,15 @@ public class Main {
          */
 
 
-
+        // Q33: Cylinder
+        Circle circle = new Circle(3.75);
+        System.out.println("circle.radius= " + circle.getRadius());
+        System.out.println("circle.area= " + circle.getArea());
+        Cylinder cylinder = new Cylinder(5.55, 7.25);
+        System.out.println("cylinder.radius= " + cylinder.getRadius());
+        System.out.println("cylinder.height= " + cylinder.getHeight());
+        System.out.println("cylinder.area= " + cylinder.getArea());
+        System.out.println("cylinder.volume= " + cylinder.getVolume());
 
     }
 }
