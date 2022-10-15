@@ -1,27 +1,9 @@
 package com.kienast;
 
-import static com.kienast.allFactors.AllFactors.printFactors;
-import static com.kienast.areaCalculator.AreaCalculator.area;
-import static com.kienast.decimalComparator.DecimalComparator.areEqualByThreeDecimalPlaces;
-import static com.kienast.diagonalStar.DiagonalStar.printSquareStar;
-import static com.kienast.digitSum.DigitSum.sumDigits;
-import static com.kienast.equalSumChecker.EqualSumChecker.hasEqualSum;
-import static com.kienast.firstAndLastDigitSum.FirstAndLastDigitSum.sumFirstAndLastDigit;
-import static com.kienast.flourPack.FlourPack.canPack;
-import static com.kienast.getEvenDigitSum.EvenDigitSum.getEvenDigitSum;
-import static com.kienast.greatestCommonDivisor.GreatestCommonDivisor.getGreatestCommonDivisor;
-import static com.kienast.inputCalculator.InputCalculator.inputThenPrintSumAndAverage;
-import static com.kienast.largestPrime.LargestPrime.getLargestPrime;
-import static com.kienast.lastDigitChecker.LastDigitChecker.hasSameLastDigit;
-import static com.kienast.minutesToYearsAndDays.MinutesToYearsAndDays.printYearsAndDays;
-import static com.kienast.numberOfDaysInMonth.NumberOfDaysInMonth.getDaysInMonth;
-import static com.kienast.numberPalindrome.NumberPalindrome.isPalindrome;
-import static com.kienast.numberToWords.NumberToWords.numberToWords;
-import static com.kienast.paintJob.PaintJob.getBucketCount;
-import static com.kienast.perfectNumber.PerfectNumber.isPerfectNumber;
-import static com.kienast.playingCats.PlayingCats.isCatPlaying;
-import static com.kienast.sharedDigit.SharedDigit.hasSharedDigit;
-import static com.kienast.sumOdd.SumOdd.sumOdd;
+import com.kienast.oop.sumCalculator.SumCalculator;
+
+import static com.kienast.intro.areaCalculator.AreaCalculator.area;
+import static com.kienast.intro.paintJob.PaintJob.getBucketCount;
 
 public class Main {
 
@@ -243,12 +225,26 @@ public class Main {
 
 
         // Q26: Paint job
+        /*
         getBucketCount(-3.4, 2.1, 1.5, 2);
         getBucketCount(3.4, 2.1, 1.5, 2);
         getBucketCount(2.75, 3.25, 2.5, 1);
         getBucketCount(-3.4, 2.1, 1.5);
         getBucketCount(3.4, 2.1, 1.5);
         getBucketCount(7.25, 4.3, 2.35);
+         */
+
+
+        // Q27: Sum calculator
+        SumCalculator calculator = new SumCalculator();
+        calculator.setFirstNumber(5.0);
+        calculator.setSecondNumber(4);
+        System.out.println("add= " + calculator.getAdditionResult());
+        System.out.println("subtract= " + calculator.getSubtractionResult());
+        calculator.setFirstNumber(5.25);
+        calculator.setSecondNumber(0);
+        System.out.println("multiply= " + calculator.getMultiplicationResult());
+        System.out.println("divide= " + calculator.getDivisionResult());
 
     }
 }
