@@ -13,7 +13,7 @@ public class Person {
     public Person(String firstName, String lastName, int age) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.age = age;
+        this.age = (age < 0 || age > 100) ? 0 : age;
     }
 
     public boolean isTeen() {
