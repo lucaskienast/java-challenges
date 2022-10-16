@@ -1,5 +1,9 @@
 package com.kienast;
 
+import com.kienast.oop.car.Car;
+import com.kienast.oop.car.Ford;
+import com.kienast.oop.car.Holden;
+import com.kienast.oop.car.Mitsubishi;
 import com.kienast.oop.carpetCost.Calculator;
 import com.kienast.oop.carpetCost.Carpet;
 import com.kienast.oop.carpetCost.Floor;
@@ -359,6 +363,7 @@ public class Main {
 
 
         // Q35: Printer
+        /*
         Printer printer = new Printer(50, true);
         System.out.println(printer.addToner(50));
         System.out.println("initial page count = " +printer.getPagesPrinted());
@@ -366,7 +371,29 @@ public class Main {
         System.out.println("Pages printed was " + pagesPrinted +" new total print count for printer = " +printer.getPagesPrinted());
         pagesPrinted = printer.printPages(2);
         System.out.println("Pages printed was " + pagesPrinted +" new total print count for printer = " +printer.getPagesPrinted());
+         */
 
+
+        // Q36: Car polymorphism
+        Car car = new Car(8, "Base car");
+        System.out.println(car.startEngine());
+        System.out.println(car.accelerate());
+        System.out.println(car.brake());
+
+        Mitsubishi mitsubishi = new Mitsubishi(6, "Outlander VRX 4WD");
+        System.out.println(mitsubishi.startEngine());
+        System.out.println(mitsubishi.accelerate());
+        System.out.println(mitsubishi.brake());
+
+        Ford ford = new Ford(6, "Ford Falcon");
+        System.out.println(ford.startEngine());
+        System.out.println(ford.accelerate());
+        System.out.println(ford.brake());
+
+        Holden holden = new Holden(6, "Holden Commodore");
+        System.out.println(holden.startEngine());
+        System.out.println(holden.accelerate());
+        System.out.println(holden.brake());
 
     }
 }
