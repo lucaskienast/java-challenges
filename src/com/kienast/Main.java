@@ -10,6 +10,7 @@ import com.kienast.oop.person.Person;
 import com.kienast.oop.point.Point;
 import com.kienast.oop.pool.Cuboid;
 import com.kienast.oop.pool.Rectangle;
+import com.kienast.oop.printer.Printer;
 import com.kienast.oop.sumCalculator.SumCalculator;
 import com.kienast.oop.wallArea.Wall;
 
@@ -343,6 +344,7 @@ public class Main {
 
 
         // Q34: Pool area
+        /*
         Rectangle rectangle = new Rectangle(5, 10);
         System.out.println("rectangle.width= " + rectangle.getWidth());
         System.out.println("rectangle.length= " + rectangle.getLength());
@@ -353,6 +355,18 @@ public class Main {
         System.out.println("cuboid.area= " + cuboid.getArea());
         System.out.println("cuboid.height= " + cuboid.getHeight());
         System.out.println("cuboid.volume= " + cuboid.getVolume());
+         */
+
+
+        // Q35: Printer
+        Printer printer = new Printer(50, true);
+        System.out.println(printer.addToner(50));
+        System.out.println("initial page count = " +printer.getPagesPrinted());
+        int pagesPrinted = printer.printPages(4);
+        System.out.println("Pages printed was " + pagesPrinted +" new total print count for printer = " +printer.getPagesPrinted());
+        pagesPrinted = printer.printPages(2);
+        System.out.println("Pages printed was " + pagesPrinted +" new total print count for printer = " +printer.getPagesPrinted());
+
 
     }
 }
