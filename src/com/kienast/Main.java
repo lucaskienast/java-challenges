@@ -21,7 +21,10 @@ import com.kienast.oop.printer.Printer;
 import com.kienast.oop.sumCalculator.SumCalculator;
 import com.kienast.oop.wallArea.Wall;
 
+import java.util.Arrays;
+
 import static com.kienast.arrays.MinimumElement.*;
+import static com.kienast.arrays.ReverseArray.*;
 import static com.kienast.arrays.SortedArray.*;
 import static com.kienast.intro.areaCalculator.AreaCalculator.area;
 import static com.kienast.intro.paintJob.PaintJob.getBucketCount;
@@ -431,8 +434,17 @@ public class Main {
 
 
         // Q39: Minimum element
+        /*
         int numElements = readInteger();
         int[] intArr = readElements(numElements);
         int min = findMin(intArr);
+         */
+
+
+        // Q40: Reverse array
+        int numElements = getArrayLength();
+        int[] intArr = getArrayElements(numElements);
+        int[] revArr = getReversedArray(intArr);
+
     }
 }
