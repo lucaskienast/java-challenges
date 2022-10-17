@@ -21,6 +21,7 @@ import com.kienast.oop.printer.Printer;
 import com.kienast.oop.sumCalculator.SumCalculator;
 import com.kienast.oop.wallArea.Wall;
 
+import static com.kienast.arrays.MinimumElement.*;
 import static com.kienast.arrays.SortedArray.*;
 import static com.kienast.intro.areaCalculator.AreaCalculator.area;
 import static com.kienast.intro.paintJob.PaintJob.getBucketCount;
@@ -422,9 +423,16 @@ public class Main {
 
 
         // Q38: Sorted array
+        /*
         int[] myIntegers = getIntegers(5);
         int[] sortedIntegers = sortIntegers(myIntegers);
         printArray(sortedIntegers);
+         */
 
+
+        // Q39: Minimum element
+        int numElements = readInteger();
+        int[] intArr = readElements(numElements);
+        int min = findMin(intArr);
     }
 }
