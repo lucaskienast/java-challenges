@@ -21,6 +21,7 @@ import com.kienast.oop.printer.Printer;
 import com.kienast.oop.sumCalculator.SumCalculator;
 import com.kienast.oop.wallArea.Wall;
 
+import static com.kienast.arrays.SortedArray.*;
 import static com.kienast.intro.areaCalculator.AreaCalculator.area;
 import static com.kienast.intro.paintJob.PaintJob.getBucketCount;
 
@@ -402,6 +403,7 @@ public class Main {
 
 
         // Q37: Burger app
+        /*
         Hamburger hamburger = new Hamburger("Basic", "Sausage", 3.56, "White");
         hamburger.addHamburgerAddition1("Tomato", 0.27);
         hamburger.addHamburgerAddition2("Lettuce", 0.75);
@@ -416,5 +418,13 @@ public class Main {
         DeluxeBurger db = new DeluxeBurger();
         db.addHamburgerAddition3("Should not do this", 50.53);
         System.out.println("Total Deluxe Burger price is " + db.itemizeHamburger());
+         */
+
+
+        // Q38: Sorted array
+        int[] myIntegers = getIntegers(5);
+        int[] sortedIntegers = sortIntegers(myIntegers);
+        printArray(sortedIntegers);
+
     }
 }
