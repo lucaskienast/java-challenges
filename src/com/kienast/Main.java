@@ -1,5 +1,6 @@
 package com.kienast;
 
+import com.kienast.arrayList.MobilePhone;
 import com.kienast.oop.burgers.DeluxeBurger;
 import com.kienast.oop.burgers.Hamburger;
 import com.kienast.oop.burgers.HealthyBurger;
@@ -442,9 +443,16 @@ public class Main {
 
 
         // Q40: Reverse array
+        /*
         int numElements = getArrayLength();
         int[] intArr = getArrayElements(numElements);
         int[] revArr = getReversedArray(intArr);
+         */
+
+
+        // Q41: Mobile phone
+        MobilePhone mobilePhone = new MobilePhone("Max");
+        mobilePhone.startPhone();
 
     }
 }
