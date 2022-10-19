@@ -1,6 +1,7 @@
 package com.kienast;
 
 import com.kienast.arrayList.MobilePhone;
+import com.kienast.autoboxing.Bank;
 import com.kienast.oop.burgers.DeluxeBurger;
 import com.kienast.oop.burgers.Hamburger;
 import com.kienast.oop.burgers.HealthyBurger;
@@ -451,8 +452,26 @@ public class Main {
 
 
         // Q41: Mobile phone
+        /*
         MobilePhone mobilePhone = new MobilePhone("Max");
         mobilePhone.startPhone();
+         */
+
+
+        // Q42: Banking
+        Bank bank = new Bank("National Australia Bank");
+
+        bank.addBranch("Adelaide");
+
+        bank.addCustomer("Tim", "Adelaide", 50.05);
+        bank.addCustomer("Mike", "Adelaide", 175.34);
+        bank.addCustomer("Percy", "Adelaide", 220.12);
+
+        bank.addCustomerTransaction("Tim", "Adelaide", 44.22);
+        bank.addCustomerTransaction("Tim", "Adelaide", 12.44);
+        bank.addCustomerTransaction("Mike", "Adelaide", 1.65);
+
+        bank.listCustomers("Adelaide", true);
 
     }
 }
