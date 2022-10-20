@@ -2,6 +2,9 @@ package com.kienast;
 
 import com.kienast.arrayList.MobilePhone;
 import com.kienast.autoboxing.Bank;
+import com.kienast.interfaces.ISaveable;
+import com.kienast.interfaces.Monster;
+import com.kienast.interfaces.Player;
 import com.kienast.oop.burgers.DeluxeBurger;
 import com.kienast.oop.burgers.Hamburger;
 import com.kienast.oop.burgers.HealthyBurger;
@@ -23,7 +26,10 @@ import com.kienast.oop.printer.Printer;
 import com.kienast.oop.sumCalculator.SumCalculator;
 import com.kienast.oop.wallArea.Wall;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
+import java.util.Scanner;
 
 import static com.kienast.arrays.MinimumElement.*;
 import static com.kienast.arrays.ReverseArray.*;
@@ -480,8 +486,60 @@ public class Main {
         // see linked list package
 
 
+        // Q44: Savable
+        Player tim = new Player("Tim", 10, 15);
+        System.out.println(tim);
+        saveObject(tim);
 
+        tim.setHitPoints(8);
+        System.out.println(tim);
 
+        tim.setWeapon("Axe");
+        saveObject(tim);
+        // loadObject(tim);
+        System.out.println(tim);
 
+        ISaveable werewolf = new Monster("Werewolf", 20, 40);
+        System.out.println(((Monster) werewolf).getStrength());
+        System.out.println(werewolf);
+        saveObject(werewolf);
     }
+
+
+    public static void saveObject(ISaveable objectToSave) {
+        for (int i = 0; i < objectToSave.write().size(); i++) {
+            System.out.println("Saving " + objectToSave.write().get(i) + " to storage device.");
+        }
+    }
+
+    public static void loadObject(ISaveable objectToLoad) {
+        List<String> values = readValues();
+        objectToLoad.read(values);
+    }
+
+    public static List<String> readValues() {
+        List<String> values = new ArrayList<>();
+        Scanner sc = new Scanner(System.in);
+        boolean quit = false;
+        int index = 0;
+
+        System.out.println("Choose 1 to enter a value and 0 to quit...");
+
+        while (!quit) {
+            int choice = sc.nextInt();
+            sc.nextLine();
+            switch(choice) {
+                case 0:
+                    quit = true;
+                    break;
+                case 1:
+                    String input = sc.nextLine();
+                    values.add(index, input);
+                    index++;
+                    break;
+            }
+        }
+        return values;
+    }
+
 }
