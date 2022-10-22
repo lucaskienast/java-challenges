@@ -1,5 +1,7 @@
 package com.kienast;
 
+import com.kienast.abstractClass.MyList;
+import com.kienast.abstractClass.Node;
 import com.kienast.arrayList.MobilePhone;
 import com.kienast.autoboxing.Bank;
 import com.kienast.interfaces.ISaveable;
@@ -487,6 +489,7 @@ public class Main {
 
 
         // Q44: Savable
+        /*
         Player tim = new Player("Tim", 10, 15);
         System.out.println(tim);
         saveObject(tim);
@@ -503,9 +506,49 @@ public class Main {
         System.out.println(((Monster) werewolf).getStrength());
         System.out.println(werewolf);
         saveObject(werewolf);
+         */
+
+
+        // Q45: Abstract class
+        MyList list = new MyList(null);
+        list.traverse(list.getRoot());
+
+        // String stringData = "Darwin Brisbane Perth Melbourne Canberra Adelaide Sydney Canberra";
+        String stringData = "5 7 3 9 8 2 1 0 4 6";
+
+        String[] data = stringData.split(" ");
+
+        for (String s : data) {
+            list.addItem(new Node(s));
+        }
+
+        list.traverse(list.getRoot());
+        list.removeItem(new Node("3"));
+        list.traverse(list.getRoot());
+
+        list.removeItem(new Node("5"));
+        list.traverse(list.getRoot());
+
+        list.removeItem(new Node("0"));
+        list.removeItem(new Node("4"));
+        list.removeItem(new Node("2"));
+        list.traverse(list.getRoot());
+
+        list.removeItem(new Node("9"));
+        list.traverse(list.getRoot());
+        list.removeItem(new Node("8"));
+        list.traverse(list.getRoot());
+        list.removeItem(new Node("6"));
+        list.traverse(list.getRoot());
+
+        list.removeItem(list.getRoot());
+        list.traverse(list.getRoot());
+        list.removeItem(list.getRoot());
+        list.traverse(list.getRoot());
     }
 
-
+    /*
+    // Q44: Savable
     public static void saveObject(ISaveable objectToSave) {
         for (int i = 0; i < objectToSave.write().size(); i++) {
             System.out.println("Saving " + objectToSave.write().get(i) + " to storage device.");
@@ -541,5 +584,6 @@ public class Main {
         }
         return values;
     }
+     */
 
 }
