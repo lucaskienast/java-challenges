@@ -78,13 +78,13 @@ public class MyList implements NodeList {
     }
 
     @Override
-    public void traverse(ListItem root) {
-        if (root == null) {
+    public void traverse(ListItem item) {
+        if (item == null) {
             System.out.println("The list is empty");
         } else {
-            while (root != null) {
-                System.out.println(root.getValue());
-                root = root.next();
+            while (item != null) {
+                System.out.println(item.getValue());
+                item = item.next();
             }
         }
     }

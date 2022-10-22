@@ -2,6 +2,7 @@ package com.kienast;
 
 import com.kienast.abstractClass.MyList;
 import com.kienast.abstractClass.Node;
+import com.kienast.abstractClass.SearchTree;
 import com.kienast.arrayList.MobilePhone;
 import com.kienast.autoboxing.Bank;
 import com.kienast.interfaces.ISaveable;
@@ -510,8 +511,9 @@ public class Main {
 
 
         // Q45: Abstract class
-        MyList list = new MyList(null);
-        list.traverse(list.getRoot());
+        // MyList list = new MyList(null);
+        SearchTree tree = new SearchTree(null);
+        tree.traverse(tree.getRoot());
 
         // String stringData = "Darwin Brisbane Perth Melbourne Canberra Adelaide Sydney Canberra";
         String stringData = "5 7 3 9 8 2 1 0 4 6";
@@ -519,32 +521,32 @@ public class Main {
         String[] data = stringData.split(" ");
 
         for (String s : data) {
-            list.addItem(new Node(s));
+            tree.addItem(new Node(s));
         }
 
-        list.traverse(list.getRoot());
-        list.removeItem(new Node("3"));
-        list.traverse(list.getRoot());
+        tree.traverse(tree.getRoot());
+        tree.removeItem(new Node("3"));
+        tree.traverse(tree.getRoot());
 
-        list.removeItem(new Node("5"));
-        list.traverse(list.getRoot());
+        tree.removeItem(new Node("5"));
+        tree.traverse(tree.getRoot());
 
-        list.removeItem(new Node("0"));
-        list.removeItem(new Node("4"));
-        list.removeItem(new Node("2"));
-        list.traverse(list.getRoot());
+        tree.removeItem(new Node("0"));
+        tree.removeItem(new Node("4"));
+        tree.removeItem(new Node("2"));
+        tree.traverse(tree.getRoot());
 
-        list.removeItem(new Node("9"));
-        list.traverse(list.getRoot());
-        list.removeItem(new Node("8"));
-        list.traverse(list.getRoot());
-        list.removeItem(new Node("6"));
-        list.traverse(list.getRoot());
+        tree.removeItem(new Node("9"));
+        tree.traverse(tree.getRoot());
+        tree.removeItem(new Node("8"));
+        tree.traverse(tree.getRoot());
+        tree.removeItem(new Node("6"));
+        tree.traverse(tree.getRoot());
 
-        list.removeItem(list.getRoot());
-        list.traverse(list.getRoot());
-        list.removeItem(list.getRoot());
-        list.traverse(list.getRoot());
+        tree.removeItem(tree.getRoot());
+        tree.traverse(tree.getRoot());
+        tree.removeItem(tree.getRoot());
+        tree.traverse(tree.getRoot());
     }
 
     /*
