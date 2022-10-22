@@ -2,7 +2,6 @@ package com.kienast.abstractClass;
 
 public class Node extends ListItem {
 
-
     public Node(Object value) {
         super(value);
     }
