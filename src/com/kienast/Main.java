@@ -29,6 +29,7 @@ import com.kienast.oop.pool.Rectangle;
 import com.kienast.oop.printer.Printer;
 import com.kienast.oop.sumCalculator.SumCalculator;
 import com.kienast.oop.wallArea.Wall;
+import com.kienast.series.Series;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -553,6 +554,7 @@ public class Main {
 
 
         // Q46: Generics for league table
+        /*
         League<Team<FootballPlayer>> footballLeague = new League<>("AFL");
         Team<FootballPlayer> adelaideCrows = new Team<>("Adelaide Crows");
         Team<FootballPlayer> melbourne = new Team<>("Melbourne");
@@ -590,6 +592,13 @@ public class Main {
         reallyRaw.add(adelaideCrows);     // unchecked warning
         reallyRaw.add(baseballTeam);    // unchecked warning
         reallyRaw.add(rawTeam);         // unchecked warning
+         */
+
+
+        // Q47: Number series
+        System.out.println(Series.nSum(10));
+        System.out.println(Series.factorial(10));
+        System.out.println(Series.fibonacci(10));
     }
 
     /*
