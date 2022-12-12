@@ -5,6 +5,7 @@ import com.kienast.abstractClass.Node;
 import com.kienast.abstractClass.SearchTree;
 import com.kienast.arrayList.MobilePhone;
 import com.kienast.autoboxing.Bank;
+import com.kienast.concurrency.*;
 import com.kienast.generics.*;
 import com.kienast.interfaces.ISaveable;
 import com.kienast.interfaces.Monster;
@@ -39,6 +40,7 @@ import java.util.Scanner;
 import static com.kienast.arrays.MinimumElement.*;
 import static com.kienast.arrays.ReverseArray.*;
 import static com.kienast.arrays.SortedArray.*;
+import static com.kienast.concurrency.ThreadColor.*;
 import static com.kienast.intro.areaCalculator.AreaCalculator.area;
 import static com.kienast.intro.paintJob.PaintJob.getBucketCount;
 
@@ -596,9 +598,27 @@ public class Main {
 
 
         // Q47: Number series
+        /*
         System.out.println(Series.nSum(10));
         System.out.println(Series.factorial(10));
         System.out.println(Series.fibonacci(10));
+         */
+
+
+        // Q48: Simple Multi-Threading
+        //ConcurrencyMain.test();
+
+        // Q49: Multiple Threads Countdown
+        Countdown countdown = new Countdown();
+        CountdownThread t1 = new CountdownThread(countdown);
+        t1.setName("Thread 1");
+        CountdownThread t2 = new CountdownThread(countdown);
+        t2.setName("Thread 2");
+
+        t1.start();
+        t2.start();
+
+
     }
 
     /*
