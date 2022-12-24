@@ -59,10 +59,60 @@ public class IntroMain {
         htmlText.append("<h2>Summary</h2>");
         htmlText.append("<p>There is the summary.</p>");
 
-        String h2Pattern = ".*<h2>.*";
+        //String h2Pattern = ".*<h2>.*";
+        String h2Pattern = "<h2>";
         Pattern pattern = Pattern.compile(h2Pattern);
         Matcher matcher = pattern.matcher(htmlText);
         System.out.println(matcher.matches());
+        matcher.reset();
+
+        int count = 0;
+        while(matcher.find()) {
+            count++;
+            System.out.println("Occurrence " + count + " : " + matcher.start() + " to " + matcher.end());
+        }
+
+        String h2GroupPattern = "(<h2>.*?</h2>)";
+        Pattern groupPattern = Pattern.compile(h2GroupPattern);
+        Matcher groupMatcher = groupPattern.matcher(htmlText);
+        System.out.println(groupMatcher.matches());
+        groupMatcher.reset();
+
+        while(groupMatcher.find()) {
+            System.out.println("Occurrence " + groupMatcher.group(1));
+        }
+
+        String h2TextGroups = "(<h2>)(.+?)(</h2>)";
+        Pattern h2TextPattern = Pattern.compile(h2TextGroups);
+        Matcher h2TextMatcher = h2TextPattern.matcher(htmlText);
+        System.out.println(h2TextMatcher.matches());
+        h2TextMatcher.reset();
+
+        while(h2TextMatcher.find()) {
+            System.out.println("Occurrence " + h2TextMatcher.group(2));
+        }
+
+        String tvTest = "tstvtkt";
+        //String tNotVRegExp = "t[^v]";
+        //String tNotVRegExp = "t(?!v)";
+        String tNotVRegExp = "t(?=v)"; // t and v
+        Pattern tNotVPattern = Pattern.compile(tNotVRegExp);
+        Matcher tNotVMatcher = tNotVPattern.matcher(tvTest);
+
+        int count1 = 0;
+        while(tNotVMatcher.find()) {
+            count1++;
+            System.out.println("Occurrence " + count1 + " : " + tNotVMatcher.start() + " to " + tNotVMatcher.end());
+        }
+
+        System.out.println("____________________________");
+
+        String phoneNumber = "1234567890"; // should not match
+        String phoneNumber2 = "(123) 456-7890"; // should match
+
+        System.out.println("phone 1 = " + phoneNumber.matches("^([\\(]{1}[0-9]{3}[\\)]{1}[ ]{1}[0-9]{3}[\\-]{1}[0-9]{4})$"));
+        System.out.println("phone 2 = " + phoneNumber2.matches("^([\\(]{1}[0-9]{3}[\\)]{1}[ ]{1}[0-9]{3}[\\-]{1}[0-9]{4})$"));
+
     }
 
 }
