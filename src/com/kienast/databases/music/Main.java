@@ -9,6 +9,7 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
+        // open datasource
         Datasource datasource = new Datasource();
 
         if (!datasource.open()) {
@@ -16,6 +17,7 @@ public class Main {
             return;
         }
 
+        // get all artists
         List<Artist> artists = datasource.queryArtists(Datasource.ORDER_BY_ASC);
 
         if (artists == null) {
@@ -27,6 +29,7 @@ public class Main {
             System.out.println(a.getId() + " | " + a.getName());
         });
 
+        // get all albums of artist
         List<String> albumNames = datasource.queryAlbumsForArtist("Pink Floyd", Datasource.ORDER_BY_DESC);
 
         if (albumNames == null) {
@@ -36,6 +39,7 @@ public class Main {
 
         albumNames.forEach(System.out::println);
 
+        // get all artist with song name
         List<SongArtist> songArtists = datasource.queryArtistForSong("Go Your Own Way", Datasource.ORDER_BY_ASC);
 
         if (songArtists == null) {
@@ -47,8 +51,29 @@ public class Main {
             System.out.println(sa.getArtistName() + " | " + sa.getAlbumName() + " | " + sa.getTrack());
         });
 
+        // get songs meta data
         datasource.querySongsMetaData();
 
+        // get number of songs
+        int count = datasource.getCount(Datasource.TABLE_SONGS);
+        System.out.println("#Songs: " + count);
+
+        // create view for artists
+        datasource.createViewForSongArtists();
+
+        // get all artist with song name
+        List<SongArtist> songArtistsFromView = datasource.querySongInfoView("Go Your Own Way");
+
+        if (songArtistsFromView == null || songArtistsFromView.isEmpty()) {
+            System.out.println("No artists for song!");
+            return;
+        }
+
+        songArtistsFromView.forEach(sa -> {
+            System.out.println(sa.getArtistName() + " | " + sa.getAlbumName() + " | " + sa.getTrack());
+        });
+
+        // close datasource
         datasource.close();
     }
 
