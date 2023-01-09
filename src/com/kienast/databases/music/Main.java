@@ -73,6 +73,9 @@ public class Main {
             System.out.println(sa.getArtistName() + " | " + sa.getAlbumName() + " | " + sa.getTrack());
         });
 
+        // insert artist, album and song in one transaction
+        datasource.insertSong("Like A Rolling Stone", "Bob Dylan", "Bob Dylan's Greatest Hits", 5);
+
         // close datasource
         datasource.close();
     }
